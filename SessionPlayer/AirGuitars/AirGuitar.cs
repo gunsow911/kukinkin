@@ -90,8 +90,8 @@ namespace SessionPlayer.AirGuitars
         /// </summary>
         public void Run()
         {
-            if (this.Power > 0) this.Power -= 1;
-            if (this.Groove > 0) this.Groove -= 1;
+            if (this.Power > 0) this.Power -= 2;
+            if (this.Groove > 0) this.Groove -= 2;
             if (this.Power < 0) this.Power = 0;
             if (this.Groove < 0) this.Groove = 0;
         }
