@@ -46,6 +46,7 @@
             this.groupBoxSerialPort = new System.Windows.Forms.GroupBox();
             this.buttonPortUpdate = new System.Windows.Forms.Button();
             this.comboBoxSerialPorts = new System.Windows.Forms.ComboBox();
+            this.buttonRestart = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBoxGroove.SuspendLayout();
@@ -77,10 +78,10 @@
             // 
             this.buttonPlay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPlay.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.buttonPlay.Location = new System.Drawing.Point(448, 272);
+            this.buttonPlay.Location = new System.Drawing.Point(333, 272);
             this.buttonPlay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonPlay.Name = "buttonPlay";
-            this.buttonPlay.Size = new System.Drawing.Size(175, 72);
+            this.buttonPlay.Size = new System.Drawing.Size(138, 72);
             this.buttonPlay.TabIndex = 2;
             this.buttonPlay.Text = "再生";
             this.buttonPlay.UseVisualStyleBackColor = true;
@@ -110,7 +111,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(426, 76);
+            this.groupBox1.Size = new System.Drawing.Size(302, 76);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "加速度";
@@ -233,11 +234,25 @@
             this.comboBoxSerialPorts.TabIndex = 0;
             this.comboBoxSerialPorts.SelectedIndexChanged += new System.EventHandler(this.comboBoxSerialPorts_SelectedIndexChanged);
             // 
+            // buttonRestart
+            // 
+            this.buttonRestart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRestart.Font = new System.Drawing.Font("游ゴシック", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonRestart.Location = new System.Drawing.Point(477, 272);
+            this.buttonRestart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonRestart.Name = "buttonRestart";
+            this.buttonRestart.Size = new System.Drawing.Size(138, 72);
+            this.buttonRestart.TabIndex = 11;
+            this.buttonRestart.Text = "最初から";
+            this.buttonRestart.UseVisualStyleBackColor = true;
+            this.buttonRestart.Click += new System.EventHandler(this.buttonRestart_Click);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 357);
+            this.Controls.Add(this.buttonRestart);
             this.Controls.Add(this.groupBoxSerialPort);
             this.Controls.Add(this.groupBoxSelectFile);
             this.Controls.Add(this.groupBoxGroove);
@@ -284,6 +299,7 @@
         private System.Windows.Forms.GroupBox groupBoxSerialPort;
         private System.Windows.Forms.Button buttonPortUpdate;
         private System.Windows.Forms.ComboBox comboBoxSerialPorts;
+        private System.Windows.Forms.Button buttonRestart;
     }
 }
 

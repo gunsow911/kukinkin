@@ -138,6 +138,11 @@ namespace SessionPlayer.MainViews
             }
         }
 
+        private void buttonRestart_Click(object sender, EventArgs e)
+        {
+            this.presenter.RestartPlay();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.presenter.Run();

@@ -39,6 +39,7 @@ namespace SessionPlayer.MainViews
             this.view.FilePath = string.Empty;
             this.view.IsPlayed = false;
             this.waveOut = new WaveOut();
+            this.waveOut.Volume = 0.55f;
             this.guiter = new AirGuitar(new SimpleTwanger(), new SimpleGroover());
             this.guiter.OnGroovy += guiter_OnGroovy;
 
@@ -110,6 +111,18 @@ namespace SessionPlayer.MainViews
             this.view.Power = 0;
             this.view.Groove = 0;
             this.waveOut.Pause();
+        }
+
+        public void RestartPlay()
+        {
+            if (this.reader == null) return;
+            this.view.IsPlayed = false;
+            this.guiter.Initialize();
+            this.view.Power = 0;
+            this.view.Groove = 0;
+            this.waveOut.Stop();
+            this.reader.Position = 0;
+            Trace.WriteLine("restart");
         }
 
         public void Receive(int x, int y, int z)
